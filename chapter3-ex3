@@ -1,0 +1,21 @@
+Which of the following are invalid constats? Why?
+
+123.456 (float)                                       0x10.5 (hexadecimal float)            0X0G1 (INVALID)
+0001 (valid int, but 0s are redundant)                0xFFFF (hexadecimal integer)          123L (valid long)
+0Xab05 (valid hexadecimal)                            OL (valid long)                       -597.25 (float)
+123.5e2 (valid float in scientific notation)          .0001 (valid float)                   +12 (valid int, though + is redundant)
+98.6F (explicitly expressed float constant)           98.7U (INVALID)                       17777s (INVALID)
+0996 (INVALID)                                        -12E-12 (valid float)                 07777 (valid int)
+1234uL (valid unsigned long int)                      1.2Fe-7 (INVALID)                     15,000 (INVALID)
+1.234L (long double)                                  197u (unsigned integer)               100U (unsigned integer)
+OXABCDEFL (long int, hex)                             0xabcu (hex, unsigned int)            +123 (valid int)
+
+Answers by nikulina
+
+0X0G1 (invalid, hexadecimal integer can only include characters from A - F)
+98.7U (C doesn't have unsigned floats)
+17777s (An integer can only be followed by the suffix' u, U, l, or L)
+0996 (// Octal constants can only contain integers between 0 and 7)
+1.2Fe-7 (F is not used before e in floats'scientific notation)
+15,000 (invalid, because , is used)
+
