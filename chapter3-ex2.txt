@@ -1,0 +1,23 @@
+Which of the following are invalid variable names?
+
+Int             char      6_05
+Calloc          Xx        alpha_beta_routine
+floating        _1312     z
+ReInitialize    _         A$
+
+Answers by nikulina
+
+These variable names are not valid
+
+char      char is a reserved word
+6_95      variable names cannot start with digits
+A$        $ is not a valid character
+
+______________
+
+These variable names are valid, but are not advisable to use nonetheless
+
+Int     int (starting with lowercase) is a reserved word, using "Int" is confusing
+
+Calloc  calloc() (starting with lowercase) is the C library function that allocates
+        the requested memory and returns a pointer to it. Using "Calloc"is confusing as well
